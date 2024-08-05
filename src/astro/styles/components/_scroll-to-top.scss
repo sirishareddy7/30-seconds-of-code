@@ -1,0 +1,65 @@
+nav[aria-label='Scroll to top'] {
+  // Use the correct grid area (right sidebar).
+  grid-area: right;
+  display: block;
+  // Add some padding to align with the rest of the elements on the page.
+  padding: 150dvh var(--spacing-12) var(--spacing-20) var(--spacing-24);
+
+  // @media (max-width: 83rem) {
+  //   // Hide in viewports under 1328px wide.
+  //   display: none;
+  // }
+
+  div {
+    // Make the table of contents stick to the bottom of the page.
+    position: sticky;
+    top: calc(100dvh - var(--spacing-24));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // // Display as a grid to define a max width for the contents and consume
+    // // leftover space on the left side, as needed.
+    // display: grid;
+    // grid-template-columns:
+    //   // Consume leftover space on the left side.
+
+    //   minmax(0, 1fr)
+    //   // Limit the width of the contents to 17.5rem.
+    //   minmax(auto, 17.5rem);
+    // grid-template-rows: auto;
+    // // Add spacing between heading and list.
+    // row-gap: var(--spacing-10);
+
+    // > * {
+    //   // Place all contents in the second column.
+    //   grid-column: 2;
+    // }
+  }
+
+  a {
+    // Remove underlines from links.
+    --link_color-underline: transparent;
+    // Apply a transition on hover.
+    transition: color var(--animation-duration-medium) ease;
+
+    @media (hover: hover) {
+      &:is(:hover, :focus) {
+        // Only apply hover styles on devices that support hover.
+        color: var(--color-primary-light);
+      }
+    }
+  }
+  a {
+    // Remove underlines from links.
+    --link_color-underline: transparent;
+    // Apply a transition on hover.
+    transition: color var(--animation-duration-medium) ease;
+
+    @media (hover: hover) {
+      &:is(:hover, :focus) {
+        // Only apply hover styles on devices that support hover.
+        color: var(--color-primary-light);
+      }
+    }
+  }
+}

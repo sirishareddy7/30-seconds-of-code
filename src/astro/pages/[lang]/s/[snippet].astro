@@ -8,6 +8,7 @@ import Layout from '#src/astro/layouts/Layout.astro';
 import Breadcrumb from '#src/astro/components/Breadcrumb.astro';
 import SnippetContent from '#src/astro/components/SnippetContent.astro';
 import TableOfContents from '#src/astro/components/TableOfContents.astro';
+import ScrollToTop from '#src/astro/components/ScrollToTop.astro';
 import PreviewList from '#src/astro/components/PreviewList.astro';
 
 export async function getStaticPaths() {
@@ -48,5 +49,6 @@ const {
       <h2 slot='title'>More like this</h2>
     </PreviewList>
 </main>
-<TableOfContents tableOfContents={snippet.tableOfContents} slot='side-bar' />
+<TableOfContents tableOfContents={snippet.tableOfContents} slot='left-side-bar' />
+<ScrollToTop slot='right-side-bar' />
 </Layout>
